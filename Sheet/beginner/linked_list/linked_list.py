@@ -63,3 +63,14 @@ class LinkedList:
             if current:
                 print("-->", end="")
         print()
+
+
+class LinkedLinkFunctions:
+    def __init__(self):
+        pass
+
+    def sort(l):
+        pass
+
+    def merge(l1, l2):
+        pass
