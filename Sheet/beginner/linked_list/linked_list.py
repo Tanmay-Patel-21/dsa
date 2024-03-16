@@ -116,34 +116,34 @@ class LinkedLinkFunctions:
                 r_curr = r_curr.next
                 j += 1
                 k += 1
-            # while (i < l.length and j < r.length):
-            #     if (l[i] <= r[j]):
-            #         arr[k] = l[i]
-            #         i += 1
-            #     else:
-            #         arr[k] = r[j]
-            #         j += 1
-            #     k += 1
-            # while (i < len(l)):
-            #     arr[k] = l[i]
-            #     i += 1
-            #     k += 1
-
-            # while (j < len(r)):
-            #     arr[k] = r[j]
-            #     j += 1
-            #     k += 1
 
     def merge(self, l1, l2):
-        pass
+        l1.length += l2.length
+        current = l1.head
+        while current.next:
+            current = current.next
+        current.next = l2.head
 
 
 lf = LinkedLinkFunctions()
-arr = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-ll = LinkedList()
-for i in arr:
-    ll.addNode(LinkedNode(i))
-# ll.changeValue(3, 69)
-lf.sort(ll)
-ll.printList()
-# print(arr)
+# arr1 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr1 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+arr2 = [20, 19, 18, 17, 16, 15, 14, 13, 12, 11]
+arr3 = [30, 29, 28, 27, 26, 25, 24, 23, 22, 21]
+ll3 = LinkedList()
+ll2 = LinkedList()
+ll1 = LinkedList()
+for i in arr1:
+    ll1.addNode(LinkedNode(i))
+for j in arr2:
+    ll2.addNode(LinkedNode(j))
+for j in arr3:
+    ll3.addNode(LinkedNode(j))
+# ll1.printList()
+# ll2.printList()
+lf.merge(ll1, ll2)
+lf.merge(ll1, ll3)
+lf.sort(ll1)
+ll1.printList()
+# print(ll1.length)
+# ll3.printList()
