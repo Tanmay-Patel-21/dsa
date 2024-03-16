@@ -49,7 +49,7 @@ class LinkedList:
 
         current = self.head
         current_pos = 0
-        while (current_pos < pos):
+        while (current_pos < pos-1):
             current = current.next
             current_pos += 1
         node.next = current.next
@@ -63,18 +63,3 @@ class LinkedList:
             if current:
                 print("-->", end="")
         print()
-
-
-linked_list = LinkedList()
-
-values = [0, 1, 2, 3, 4, 5, 6, 7, 9, 10]
-
-for i in values:
-    newNode = LinkedNode(i)
-    linked_list.addNode(newNode)
-
-linked_list.printList()
-print(linked_list.length)
-linked_list.insertNodeAtPos(LinkedNode(8), 7)
-linked_list.printList()
-print(linked_list.length)
