@@ -7,7 +7,6 @@ class LinkedNode:
 class LinkedList:
     def __init__(self, head=None):
         self.head = head
-
         if head is not None:
             self.length = 1
         else:
@@ -123,27 +122,3 @@ class LinkedLinkFunctions:
         while current.next:
             current = current.next
         current.next = l2.head
-
-
-lf = LinkedLinkFunctions()
-# arr1 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-arr1 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-arr2 = [20, 19, 18, 17, 16, 15, 14, 13, 12, 11]
-arr3 = [30, 29, 28, 27, 26, 25, 24, 23, 22, 21]
-ll3 = LinkedList()
-ll2 = LinkedList()
-ll1 = LinkedList()
-for i in arr1:
-    ll1.addNode(LinkedNode(i))
-for j in arr2:
-    ll2.addNode(LinkedNode(j))
-for j in arr3:
-    ll3.addNode(LinkedNode(j))
-# ll1.printList()
-# ll2.printList()
-lf.merge(ll1, ll2)
-lf.merge(ll1, ll3)
-lf.sort(ll1)
-ll1.printList()
-# print(ll1.length)
-# ll3.printList()
